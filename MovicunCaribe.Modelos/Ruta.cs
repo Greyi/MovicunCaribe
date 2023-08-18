@@ -10,6 +10,6 @@ namespace MovicunCaribe.Modelos
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public Recorrido tramo { get; set; }
+        public Recorrido Tramo { get; set; }
     }
 }

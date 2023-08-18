@@ -10,5 +10,11 @@ namespace MovicunCaribe.Modelos
     {
         public double Latitud { get; set; }
         public double Longitud { get; set; }
+
+        public Coordenadas(double lt, double lg)
+        {
+            Latitud = lt;
+            Longitud = lg;
+        }
     }
 }

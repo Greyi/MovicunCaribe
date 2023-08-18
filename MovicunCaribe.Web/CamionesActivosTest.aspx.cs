@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace MovicunCaribe
 {
-    public partial class CamionesActivos : Page
+    public partial class CamionesActivosTest : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -69,8 +69,27 @@ namespace MovicunCaribe
                             }
                         }
                         }
+                    },
+                    new Ruta(){
+                        Id=1,
+                        Nombre="Ruta 2",
+                        Tramo = new Recorrido(){
+                            Id = 1,
+                            Tramo =  new List<Parada>()
+                            {
+                                new Parada() { Coordenadas = new Coordenadas(21.1548583,-86.7995376) },
+                                new Parada() { Coordenadas = new Coordenadas(21.150752,-86.795294) },
+                                new Parada() { Coordenadas = new Coordenadas(21.1430647,-86.7827709) },
+                                new Parada() { Coordenadas = new Coordenadas(21.1423915,-86.7755872) },
+                                new Parada() { Coordenadas = new Coordenadas(21.1347092,-86.7609454) },new Parada() { Coordenadas = new Coordenadas(21.1346325,-86.7560166) },new Parada() { Coordenadas = new Coordenadas(21.134751,-86.7542303) },
+                                new Parada() { Coordenadas = new Coordenadas(21.1367044,-86.7496699) },new Parada() { Coordenadas = new Coordenadas(21.1351974,-86.7481993) },new Parada() { Coordenadas = new Coordenadas(21.1339345,-86.7482063) },
+                                new Parada() { Coordenadas = new Coordenadas(21.123027,-86.755265) },new Parada() { Coordenadas = new Coordenadas(21.1206235,-86.7563568) },new Parada() { Coordenadas = new Coordenadas(21.1184724,-86.757413) },
+                                new Parada() { Coordenadas = new Coordenadas(21.1150698,-86.7590161) },new Parada() { Coordenadas = new Coordenadas(21.1127887,-86.7613599) },new Parada() { Coordenadas = new Coordenadas(21.1099701,-86.7631061) },
+                                new Parada() { Coordenadas = new Coordenadas(21.0724105,-86.7794073) },new Parada() { Coordenadas = new Coordenadas(21.0704645,-86.7806397) },new Parada() { Coordenadas = new Coordenadas(21.0671785,-86.7804347) },
+                                new Parada() { Coordenadas = new Coordenadas(21.0655674,-86.7799536) },new Parada() { Coordenadas = new Coordenadas(21.0609945,-86.7799513) },new Parada() { Coordenadas = new Coordenadas(21.058174,-86.781958) },
+                            }
+                        }
                     }
-
                 };
                 script.Append($"CargaRutas({JsonConvert.SerializeObject(rutas)});");
                 script.Append($"CargaCamion({JsonConvert.SerializeObject(camion)});");
